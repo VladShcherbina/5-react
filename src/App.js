@@ -7,13 +7,11 @@ import PhotosPage from "./pages/PhotosPage/PhotosPage";
 
 function App() {
   return (
-    <div>
    <Routes>
     <Route path="/" element={<UserListPage />} />
     <Route path="/album/:id" element={<AlbumPage />} />
     <Route path="/photos/:id" element={<PhotosPage />} />
    </Routes>
-   </div>
   );
 }
 
