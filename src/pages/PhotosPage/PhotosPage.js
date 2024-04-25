@@ -22,9 +22,7 @@ function PhotosPage() {
 
   return (
     <div className={styles.wrapper}>  
-    {photos.map((photo) => {
-        return (<img alt="" key={photo.id} src={photo.url}></img> )})
-    } 
+        {photos.map((photo) => {return (<img alt="" key={photo.id} src={photo.url}></img> )})} 
         <button onClick={goBack} className={styles.goBackBtn}>Go Back</button>  
     </div>
   );

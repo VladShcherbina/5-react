@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 import styles from './UserListPage.module.css'
 
-
 function UserListPage() {
 
     const [users, setUsers] = useState([])
@@ -16,13 +15,10 @@ function UserListPage() {
         .then(user => setUsers(user))
     },[])
 
-
   return (
     <div className={styles.wrapper}>
         {users.map((user) => {
-            return (
-                <Link to={`/album/${user.id}`} className={styles.items} key={user.id}>Name: {user.name}</Link>
-            )
+            return (<Link to={`/album/${user.id}`} className={styles.items} key={user.id}>Name: {user.name}</Link>)
         })}
     </div>
   );
