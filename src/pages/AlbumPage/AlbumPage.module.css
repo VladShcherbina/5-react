@@ -1,6 +1,6 @@
 .wrapper {
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     gap: 30px;
     margin: 20px;
     justify-content: center;
@@ -10,8 +10,13 @@
 .items {
     text-decoration: none;
     border: 1px solid black;
-    width: 30%;
+    width: 40%;
     border-radius: 20px;
     padding: 5px;
     text-align: center;
+}
+
+.items:hover {
+    background-color: red;
+    color: white;
 }

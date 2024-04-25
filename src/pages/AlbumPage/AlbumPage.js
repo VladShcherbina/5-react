@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+
 
 import styles from './AlbumPage.module.css'
 
@@ -9,18 +9,23 @@ import styles from './AlbumPage.module.css'
 function AlbumPage() {
     const {id} = useParams()
 
-    const [albums, setAlbums] = useState({})
+    const [albums, setAlbums] = useState([])
 
     useEffect(() => {
-        fetch(`https://jsonplaceholder.typicode.com/albums/${id}`)
+        fetch(`https://jsonplaceholder.typicode.com/albums?userId=${id}`)
         .then(res => res.json())
         .then(album => setAlbums(album))
     },[id])
+    
 
 
   return (
     <div className={styles.wrapper}>
-        <Link to={`/photos/${albums.id}`} className={styles.items}  key={albums.id}>Title: {albums.title}</Link>
+        {albums.map((elem) => {
+            return (
+                <Link to={`/photos/${elem.id}`} className={styles.items}  key={elem.id}>Title: {elem.title}</Link>
+            )
+        })}
     </div>
   );
   }
