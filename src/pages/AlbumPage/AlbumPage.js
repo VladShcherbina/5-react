@@ -21,6 +21,7 @@ function AlbumPage() {
 
   return (
     <div className={styles.wrapper}>
+        <h1>Альбоми користувача номер {id}</h1>
         {albums.map((elem) => {
             return (
                 <Link to={`/photos/${elem.id}`} className={styles.items}  key={elem.id}>Title: {elem.title}</Link>

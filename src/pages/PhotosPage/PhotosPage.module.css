@@ -1,6 +1,12 @@
-.wrapper {
+.all_wrapper{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.wrapper {
+    display: flex;
     gap: 30px;
     margin: 20px;
     justify-content: center;
@@ -24,4 +30,7 @@
     border: 1px solid red;
     color: white;
     cursor: pointer;
+}
+.image{
+    display: flex;
 }

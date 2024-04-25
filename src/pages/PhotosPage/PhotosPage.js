@@ -21,9 +21,12 @@ function PhotosPage() {
     }
 
   return (
+    <div className={styles.all_wrapper}>
+        <h1>Фото альбому номер {id}</h1>
     <div className={styles.wrapper}>  
-        {photos.map((photo) => {return (<img alt="" key={photo.id} src={photo.url}></img> )})} 
-        <button onClick={goBack} className={styles.goBackBtn}>Go Back</button>  
+        {photos.map((photo) => {return (<img className={styles.image} alt="" key={photo.id} src={photo.url}></img> )})}  
+    </div>
+    <button onClick={goBack} className={styles.goBackBtn}>Go Back</button> 
     </div>
   );
   }

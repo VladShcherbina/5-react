@@ -17,6 +17,7 @@ function UserListPage() {
 
   return (
     <div className={styles.wrapper}>
+        <h1>Список користувачів</h1>
         {users.map((user) => {
             return (<Link to={`/album/${user.id}`} className={styles.items} key={user.id}>Name: {user.name}</Link>)
         })}
